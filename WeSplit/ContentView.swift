@@ -55,6 +55,7 @@ struct ContentView: View {
                 Section(header: Text("Total before split")) {
                     let totalBeforeSplit = totalPerPerson * Double(numberOfPeople + 2)
                     Text("$\(totalBeforeSplit, specifier: "%.2f")")
+                        .foregroundColor(tipPercentage == 4 ? .red : .black)
                 }
                 
                 Section(header: Text("Amount per person")) {
